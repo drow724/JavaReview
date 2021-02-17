@@ -1,4 +1,4 @@
-package ex7.io.control1;
+package ex7.io.control2.dowhile;
 
 import java.util.Scanner;
 
@@ -23,24 +23,30 @@ public class Program {
 		System.out.print("국어1:");
 		kor1 = scan.nextInt();
 		
-		//if(!(0<=kor1 && kor1<=100))
-		//if(0>kor1 || kor1>100)
-//		if(kor1>0 || 100>kor1) {
-//			System.out.println("성적범위(0~100)을 벗어났습니다.");
-//			System.out.print("국어1:");
-//			kor1 = scan.nextInt();
-//		}
-		while(kor1<0 || 100<kor1) {
-			System.out.println("성적범위(0~100)을 벗어났습니다.");
+		do {
 			System.out.print("국어1:");
 			kor1 = scan.nextInt();
-		}
 		
-		System.out.print("국어2:");
-		kor2 = scan.nextInt();
-		System.out.print("국어3:");
-		kor3 = scan.nextInt();
+			if(kor1<0 || 100<kor1)
+				System.out.println("성적범위(0~100)을 벗어났습니다.");
+		}while(kor1<0 || 100<kor1);
+
+		do {
+			System.out.print("국어2:");
+			kor2 = scan.nextInt();
 		
+			if(kor2<0 || 100<kor2)
+				System.out.println("성적범위(0~100)을 벗어났습니다.");
+		}while(kor2<0 || 100<kor1);
+		
+		do {
+			System.out.print("국어3:");
+			kor3 = scan.nextInt();
+		
+			if(kor3<0 || 100<kor3)
+				System.out.println("성적범위(0~100)을 벗어났습니다.");
+		}while(kor3<0 || 100<kor3);
+				
 		//----------성적 출력 부분-----------
 		
 		total = kor1 + kor2 + kor3;
