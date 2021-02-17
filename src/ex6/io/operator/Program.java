@@ -1,4 +1,4 @@
-package ex5.io.scanner;
+package ex6.io.operator;
 
 import java.util.Scanner;
 
@@ -21,7 +21,6 @@ public class Program {
 		System.out.print("⎣            ⎦\n");
 		System.out.print("국어1:");
 		kor1 = scan.nextInt();
-		System.out.println(0<=kor1 && kor1<=100);
 		System.out.print("국어2:");
 		kor2 = scan.nextInt();
 		System.out.print("국어3:");
