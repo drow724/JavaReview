@@ -21,7 +21,8 @@ public class Program {
 		System.out.print("⎣            ⎦\n");
 		System.out.print("국어1:");
 		kor1 = scan.nextInt();
-		System.out.println(0<=kor1 && kor1<=100);
+		int validate = (0<=kor1 && kor1<=100)?1:0;
+		System.out.println(validate);
 		System.out.print("국어2:");
 		kor2 = scan.nextInt();
 		System.out.print("국어3:");
