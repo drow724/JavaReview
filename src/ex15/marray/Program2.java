@@ -2,11 +2,12 @@ package ex15.marray;
 
 import java.util.Scanner;
 
-public class Program {
+public class Program2 {
 	public static void main(String[] args) {
 
 //		int kor1, kor2, kor3;
-		int[] kors = new int[3*3];
+//		int[] kors = new int[3*3];
+		int[][] kors = new int[3][3];
 		int total;
 		float avg;
 		int menu;
@@ -19,8 +20,8 @@ public class Program {
 		
 		for(int j=0; j<3; j++)
 			for(int i=0; i<3; i++)
-				kors[3*j+i] = 0;
-		
+//				kors[3*j+i] = 0;
+				kors[j][i] = 0;
 		종료:
 		while(true) {
 		//----------메인 메뉴 부분-----------
@@ -69,11 +70,11 @@ public class Program {
 				for(int i=0; i<3; i++)
 					do {
 						System.out.printf("%d학년 국어%d:",j+1, i+1);
-						kors[3*j+i] = scan.nextInt();
+						kors[j][i] = scan.nextInt();
 					
-						if(kors[3*j+i]<0 || 100<kors[3*j+i])
+						if(kors[j][i]<0 || 100<kors[j][i])
 							System.out.println("성적범위(0~100)을 벗어났습니다.");
-					}while(kors[3*j+i]<0 || 100<kors[3*j+i]);
+					}while(kors[j][i]<0 || 100<kors[j][i]);
 			
 		break;
 		
@@ -86,13 +87,14 @@ public class Program {
 			
 			for(int j=0; j<3; j++) {
 //				total = kor1 + kor2 + kor3;
-				total = kors[3*j+0]+kors[3*j+1]+kors[3*j+2];
+				total = kors[j][0]+kors[j][1]+kors[j][2];
+				
 				avg = total / 3.0f;
 				
 					System.out.printf("\t%d학년  국어성적\n", j+1);
 					
 					for(int i=0; i<3; i++)
-						System.out.printf("\t국어%d : %3d\n", i+1, kors[3*j+i]);
+						System.out.printf("\t국어%d : %3d\n", i+1, kors[j][i]);
 					
 					System.out.printf("\t총 : %3d\n", total);
 					System.out.printf("\t평 : %6.2f\n", avg);
